@@ -1,0 +1,28 @@
+.hero {
+  background-image: url('/assets/turf-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.btn-primary {
+  background-color: #21808d;
+  padding: 15px 35px;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #17575a;
+}

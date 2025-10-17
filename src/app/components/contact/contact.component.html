@@ -1,0 +1,36 @@
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <div class="contact-content">
+    <!-- Contact Form -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" type="text" placeholder="Enter your name" />
+      <div *ngIf="contactForm.controls.name.invalid && contactForm.controls.name.touched" class="error">
+        Name is required (min 3 characters).
+      </div>
+
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" type="email" placeholder="Enter your email" />
+      <div *ngIf="contactForm.controls.email.invalid && contactForm.controls.email.touched" class="error">
+        Please provide a valid email.
+      </div>
+
+      <label for="message">Message</label>
+      <textarea id="message" formControlName="message" rows="5" placeholder="Enter your message"></textarea>
+      <div *ngIf="contactForm.controls.message.invalid && contactForm.controls.message.touched" class="error">
+        Message must be at least 10 characters.
+      </div>
+
+      <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+    </form>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <h3>Our Contact Details</h3>
+      <p><strong>Address:</strong> 123 Turf Avenue, City, Country</p>
+      <p><strong>Phone:</strong> +91 12345 67890</p>
+      <p><strong>Email:</strong> info@turfs.com</p>
+      <p><strong>Working Hours:</strong> Mon - Fri: 9 AM - 6 PM</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<header class="header" [class.sticky]="scrollY > 50">
+  <nav class="nav container">
+    <h2 class="nav-logo">N4 Sports Infra</h2>
+
+    <ul [class.show]="menuOpen" class="nav-list">
+      <li><a href="#home" (click)="closeMenu()">Home</a></li>
+      <li><a href="#about" (click)="closeMenu()">About</a></li>
+      <li><a href="#services" (click)="closeMenu()">Services</a></li>
+      <li><a href="#portfolio" (click)="closeMenu()">Portfolio</a></li>
+      <li><a href="#testimonials" (click)="closeMenu()">Testimonials</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+
+    <div class="nav-toggle" (click)="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</header>

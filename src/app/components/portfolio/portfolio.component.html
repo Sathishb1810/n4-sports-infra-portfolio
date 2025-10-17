@@ -1,0 +1,16 @@
+<section class="portfolio" id="portfolio">
+  <h2>Our Portfolio</h2>
+  <div class="filter-buttons">
+    <button *ngFor="let cat of categories" (click)="selectCategory(cat)" [class.active]="cat === selectedCategory">
+      {{cat}}
+    </button>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-item" *ngFor="let project of filteredProjects" tabindex="0" aria-label="{{project.title}}">
+      <h3>{{project.title}}</h3>
+      <p><strong>Category: </strong>{{project.category}}</p>
+      <p>{{project.description}}</p>
+      <p><em>{{project.location}} — {{project.year}}</em></p>
+    </div>
+  </div>
+</section>

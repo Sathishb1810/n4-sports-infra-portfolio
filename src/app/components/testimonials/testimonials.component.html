@@ -1,0 +1,8 @@
+<section class="testimonials" id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-card" *ngFor="let t of testimonials; let i = index" [class.active]="i === currentIndex">
+    <q>{{t.text}}</q>
+    <p><strong>{{t.name}}</strong>, {{t.company}}</p>
+    <p class="stars">{{ '★'.repeat(t.rating) }}</p>
+  </div>
+</section>
